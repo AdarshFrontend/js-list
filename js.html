@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adarsh</title>
+    <style>
+.heading{
+    text-align: center;
+    background-color: aqua;
+    color: crimson;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid greenyellow;
+    border-radius: 3px 3px 3px 3px;
+}
+
+
+.inner{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+fieldset{
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+.b1{
+    background-color: coral;
+    color: rgb(205, 255, 4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid rgb(1, 169, 18);
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+<!--<h1 id="h1-txt">hello </h1>-->
+<!--<hr>-->
+<fieldset>
+    <h1 class="heading">TO DO LIST</h1>
+    <div class="inner">
+<input type="text" name="" id="input" placeholder="enter here">
+<button class="b1"id="btn" >add task</button>
+<button class="b1"id="btn2" >clr task</button>
+<div id="main"></div></div></fieldset>
+
+   <script>
+   // let txt=document.getElementById("h1-txt")
+   // txt.style.color="red";
+   // txt.style.textDecoration="underline"
+    //txt.innerHTML="hello from JS";
+    //txt.style.color="pink";
+//after hr 
+let txt=document.getElementById("input")
+let btn=document.getElementById("btn");
+let btn2=document.getElementById("btn2");
+btn2.addEventListener("click", clear)
+function clear(){
+    area.innerHTML="Your data is clear sucessfully";
+}
+let area=document.getElementById("main");
+btn.addEventListener("click", (add)=>
+// function add()
+{
+    // alert("Data is added")
+    area.innerHTML+=`<h4> ${txt.value}</h4>`
+    txt.value="";
+
+})
+
+   
+
+</script> 
+</body>
+</html>
